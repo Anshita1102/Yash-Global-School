@@ -515,6 +515,10 @@ h6 {
     .hero .info {
       padding: 0 50px;
     }
+
+      .logo h1{
+          font-size: 28px;
+      }
   }
   
   .hero .info h2 {
@@ -543,6 +547,10 @@ h6 {
     .hero .info h2 {
       font-size: 36px;
     }
+
+      .logo h1{
+          font-size: 28px;
+      }
   }
   
   .hero .info p {
@@ -576,6 +584,10 @@ h6 {
     .hero .carousel-control-prev {
       padding-left: 15px;
     }
+
+      .logo h1{
+          font-size: 24px;
+      }
   }
   
   .hero .carousel-control-next {
@@ -586,6 +598,10 @@ h6 {
     .hero .carousel-control-next {
       padding-right: 15px;
     }
+
+      .logo h1{
+          font-size: 24px;
+      }
   }
   
   .hero .carousel-control-next-icon,
