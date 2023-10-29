@@ -365,8 +365,8 @@ h6 {
     filter:invert(1);
   }
 
-    .logo h1{
-        font-size: 18px;
+   .header .logo h1{
+        font-size: 20px;
     }
 
   .navbar {
