@@ -44,6 +44,77 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0;
+  color: var(--color-default);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-header h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-header span {
+  position: absolute;
+  top: 46px;
+  color: rgb(0, 75, 196, 0.1);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 56px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+
+.section-header p {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .section-header span {
+    font-size: 38px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
@@ -629,7 +700,7 @@ h6 {
   Get Started Section
   --------------------------------------------------- */
   .get-started .content {
-    padding: 100px 30px 100px 0;
+    padding: 80px 30px 80px 0;
   }
   
   .get-started .content h3 {
@@ -657,9 +728,28 @@ h6 {
   }
   
   .get-started .img-fluid {
-    padding: 100px 0;
+    padding:0;
+    margin-bottom: 80px;
     object-fit: cover;
     height: 100%;
+  }
+
+  .get-started ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .get-started ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: top;
+  }
+  
+  .get-started ul i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: var(--color-primary);
   }
 
   @media (max-width: 575px) {
@@ -836,7 +926,7 @@ section{
   margin: 0;
 }
 
-.section-header h2{
+/* .section-header h2{
     font-size: 32px;
     font-weight: 700;
     position: relative;
@@ -847,16 +937,16 @@ section{
 
 .section-header h2:before {
   margin: 0 15px 10px 0;
-}
+} */
 
-.section-header h2:before, .section-header h2:after {
+/* .section-header h2:before, .section-header h2:after {
   content: "";
   width: 50px;
   height: 4px;
   background: var(--color-primary);
-  display: inline-block;
-}
-
+  display: inline;
+} */
+/* 
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -871,7 +961,7 @@ section{
   height: 4px;
   background: var(--color-primary);
   display: inline-block;
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -1324,7 +1414,7 @@ Gallery Button
 /* ----------------------------------
 Facilities Section 
 ------------------------------------*/
-.services .service-item {
+/* .services .service-item {
   padding: 40px;
   background: #fff;
   height: 100%;
@@ -1385,4 +1475,141 @@ Facilities Section
 
 .services .service-item:hover h3 {
   border-color: var(--color-primary);
+} */
+
+
+/* Services Section - Home Page
+------------------------------*/
+.services .service-item {
+  position: relative;
+  padding-top: 20px;
+}
+
+.services .service-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-default);
+}
+
+.services .service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--color-primary);
+  border-right: 12px solid #fff;
+}
+
+.services .service-item .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-right: 30px;
+  line-height: 0;
+}
+
+.services .service-item .icon i {
+  color: var(--color-default);
+  font-size: 56px;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+.services .service-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: rgb(0, 75, 196, 0.3);
+  border-radius: 50px;
+  z-index: 1;
+  bottom: -15px;
+  right: -15px;
+  transition: 0.3s;
+}
+
+.services .service-item .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .service-item .title a {
+  color: var(--color-secondary);
+}
+
+.services .service-item .title a:hover {
+  color: var(--color-primary);
+}
+
+.services .service-item .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions Section
+--------------------------------------------------------------*/
+.faq {
+  padding-top: 80px;
+}
+
+.faq .accordion-item {
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.faq .accordion-collapse {
+  border: 0;
+}
+
+.faq .accordion-button {
+  padding: 15px 30px 20px 60px;
+  font-weight: 600;
+  border: 0;
+  font-size: 18px;
+  color: var(--color-default);
+  text-align: left;
+  background: rgba(14, 29, 52, 0.03);
+  border-radius: 5px;
+}
+
+.faq .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.faq .question-icon {
+  position: absolute;
+  top: 14px;
+  left: 25px;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.faq .accordion-button:after {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.faq .accordion-body {
+  padding: 0 30px 25px 60px;
+  border: 0;
+  background: rgba(14, 29, 52, 0.03);
+  border-radius: 5px;
 }
